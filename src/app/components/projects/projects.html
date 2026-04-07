@@ -1,0 +1,22 @@
+<section class="projects-section" id="projects">
+  <div class="section-tag">// 02. MY WORK</div>
+  <h2 class="section-heading">Featured <span class="cyan-text">Projects.</span></h2>
+
+  <div class="project-grid">
+    <div class="project-card" *ngFor="let p of projects" [@staggerItems]="projects.length">
+      <div class="card-content">
+        <div class="card-header">
+          <span class="folder-icon">📂</span>
+          <div class="links">
+            <a href="#" class="github-link">GitHub</a>
+          </div>
+        </div>
+        <h3>{{ p.title }}</h3>
+        <p>{{ p.desc }}</p>
+        <div class="tech-stack">
+          <span *ngFor="let t of p.tech">{{ t }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

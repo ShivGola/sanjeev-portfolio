@@ -1,0 +1,148 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 8%;
+  z-index: 1000;
+  transition: all 0.4s ease;
+  background: transparent;
+}
+
+.navbar.scrolled {
+  background: rgba(30, 30, 47, 0.95); /* Darker on scroll */
+  padding: 15px 8%;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: white;
+  letter-spacing: 2px;
+}
+
+.dot {
+  color: #00d2ff;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.nav-links li {
+  margin-left: 35px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #ccc;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: 0.3s;
+  text-transform: uppercase;
+}
+
+.nav-links a:hover {
+  color: #00d2ff;
+}
+
+.btn-talk {
+  background: transparent;
+  border: 2px solid #00d2ff !important;
+  padding: 8px 20px;
+  border-radius: 50px;
+  color: #00d2ff !important;
+}
+
+.btn-talk:hover {
+  background: #00d2ff;
+  color: #1e1e2f !important;
+}
+.navbar {
+  padding: 30px 8%; /* Spacing barhao */
+}
+
+.nav-links a {
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  opacity: 0.7;
+}
+
+.nav-links a:hover {
+  opacity: 1;
+}
+.hero-content {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr; /* Text bada, photo choti */
+  gap: 50px;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 8%;
+  z-index: 10;
+}
+
+.hero-text-side {
+  text-align: left;
+}
+
+/* Photo Side Styling */
+.hero-image-side {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 400px; /* Photo ki max width control karo */
+}
+
+.profile-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 30px; /* Thoda rounded corners professional lagte hain */
+  border: 2px solid rgba(0, 210, 255, 0.2);
+  z-index: 2;
+  position: relative;
+  transition: 0.5s ease;
+}
+
+/* Photo par hover karne par effect */
+.profile-img:hover {
+  transform: scale(1.02) translateY(-5px);
+  border-color: #00d2ff;
+  box-shadow: 0 20px 40px rgba(0, 210, 255, 0.2);
+}
+
+/* Photo ke piche blue glow */
+.image-bg-glow {
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 120%; height: 120%;
+  background: radial-gradient(circle, rgba(0, 210, 255, 0.15) 0%, transparent 70%);
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  filter: blur(50px);
+}
+
+/* Mobile Responsive */
+@media (max-width: 900px) {
+  .hero-content {
+    grid-template-columns: 1fr; /* Stack visually on mobile */
+    text-align: center;
+    padding-top: 100px;
+  }
+  
+  .hero-text-side { text-align: center; }
+  .image-wrapper { max-width: 300px; margin-top: 50px; }
+}

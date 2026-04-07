@@ -1,0 +1,104 @@
+.contact-section {
+  padding: 120px 8%;
+  background: #050505;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-glow {
+  position: absolute;
+  bottom: -10%; right: -5%;
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(0, 210, 255, 0.08) 0%, transparent 70%);
+  filter: blur(80px);
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+  align-items: start;
+}
+
+.sub-header { color: #00d2ff; font-family: 'Fira Code', monospace; letter-spacing: 2px; }
+.contact-title { font-size: 4rem; margin: 20px 0; line-height: 1; color: #fff; }
+.electric-text { color: #00d2ff; text-shadow: 0 0 20px rgba(0, 210, 255, 0.3); }
+
+.contact-desc { color: #888; font-size: 1.1rem; max-width: 450px; line-height: 1.6; }
+
+.contact-details { margin-top: 50px; }
+.detail-item { margin-bottom: 30px; }
+.detail-item .label { display: block; font-size: 0.7rem; text-transform: uppercase; color: #444; margin-bottom: 5px; }
+.detail-item .value { font-size: 1.3rem; color: #ccc; text-decoration: none; transition: 0.3s; }
+.detail-item .value:hover { color: #00d2ff; }
+
+/* --- FORM MAGIC --- */
+.contact-form-wrapper {
+  background: rgba(255, 255, 255, 0.02);
+  padding: 50px;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+}
+
+.input-field { position: relative; margin-bottom: 35px; }
+
+.input-field input, .input-field textarea {
+  width: 100%;
+  padding: 15px 0;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #333;
+  color: #fff;
+  font-size: 1.1rem;
+  outline: none;
+  transition: 0.3s;
+}
+
+.input-field label {
+  position: absolute;
+  top: 15px; left: 0;
+  color: #555;
+  transition: 0.3s;
+  pointer-events: none;
+}
+
+/* Floating Label Animation */
+.input-field input:focus ~ label,
+.input-field input:not(:placeholder-shown) ~ label,
+.input-field textarea:focus ~ label,
+.input-field textarea:not(:placeholder-shown) ~ label {
+  top: -15px;
+  font-size: 0.8rem;
+  color: #00d2ff;
+}
+
+.input-field input:focus, .input-field textarea:focus {
+  border-bottom: 1px solid #00d2ff;
+}
+
+.thunder-btn {
+  width: 100%;
+  padding: 20px;
+  background: #00d2ff;
+  color: #000;
+  border: none;
+  border-radius: 15px;
+  font-weight: 800;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  transition: 0.4s;
+}
+
+.thunder-btn:hover {
+  background: #fff;
+  box-shadow: 0 0 30px rgba(0, 210, 255, 0.4);
+  transform: translateY(-5px);
+}
+
+@media (max-width: 1000px) {
+  .contact-container { grid-template-columns: 1fr; gap: 60px; }
+}
